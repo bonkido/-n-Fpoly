@@ -1,0 +1,255 @@
+
+.popup2 {
+    position: fixed;
+    top: 50%;
+    left: 150%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 95%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    display: none;
+  }
+  ul{
+    list-style: none;
+  }
+  .dongChiTiet{
+      position: fixed;
+      top: 90%;
+      color: white;
+      border: none;
+      padding: 10px;
+      z-index: 999;
+      cursor: pointer;
+  }
+  .product{
+    width: 100%;
+    height: 100%;
+  }
+  .prd-left{
+    float: left;
+    width: 30%;
+  }
+  .prd-price{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  .price-chitietsp{
+    color: red;
+  }
+  .prd-img img{
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+  }
+  .prd-right{
+    float: right;
+    width: 70%;
+    height: 100%;
+  }
+  .img-item{
+    display: flex;
+    justify-content: space-around;
+  }
+  .img-item img{
+    width: 50px;
+    height: auto;
+  }
+  .prd-name{
+    padding-left: 20px;
+    width: 100%;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.2);
+    height: auto;
+  }
+  .prd-name-flex{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: 400;
+    justify-content: space-between;
+  }
+  
+  .prd-container-left{
+    float: left;
+    width: 50%;
+    height: 100%;
+  }
+  .prd-container-right{
+    float: right;
+    width: 50%;
+    height: 100%;
+    margin-top: 10px;
+  }
+
+  .item-thongtin{
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.2);
+    padding: 10px;
+  }
+  
+  .box-img img{
+    width: 50px;
+  }
+  .items-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
+  .prd-container-right-items{
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid rgb(208, 208, 208) ;
+  }
+  
+  /* item-quantity-buy */
+  .item-quantity-buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.2);
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .item-buy input {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .item-buy input:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .item-quantity input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .item-quantity input[type="number"]::-webkit-inner-spin-button,
+  .item-quantity input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .item-quantity input[type="number"]::-webkit-inner-spin-button:after,
+  .item-quantity input[type="number"]::-webkit-outer-spin-button:after {
+    content: '▲';
+    padding: 0 4px;
+    color: #555;
+  }
+  
+  .item-quantity input[type="number"]::-webkit-inner-spin-button:before,
+  .item-quantity input[type="number"]::-webkit-outer-spin-button:before {
+    content: '▼';
+    padding: 0 4px;
+    color: #555;
+  }
+  /* END item-quantity-buy */
+  
+  /* bình luận cmt  */
+  
+  .prd-container-left-items{
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .left-item-showcomment{
+    margin-top: 10px;
+  }
+  .anhvaten{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .anhvaten3cham{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    font-weight: bold;
+    font-size: 20px;
+    justify-content: space-between;
+  }
+  
+  .bacham {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .bacham .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  .bacham:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .bacham .dropdown-menu a {
+    color: black;
+    padding: 8px 0;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+  }
+  
+  .bacham .dropdown-menu a:hover {
+    background-color: #e5e5e5;
+    width: 100%;
+  
+  }
+  textarea{
+    width: 100%;
+  }
+  .popup-button2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+  }
+  
+  #closePopup2 {
+    background-color: #ccc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #confirmPopup2 {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* end bình luận cmt  */

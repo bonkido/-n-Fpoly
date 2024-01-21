@@ -1,0 +1,136 @@
+.popup {
+    position: fixed;
+    left: 110%;
+    width: 85%;
+    height: 80%;
+    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.6);
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.popup-tab {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.popup-tab a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(36, 134, 139);
+    position: relative;
+}
+
+.popup-tab a::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* content  */
+.popup-main{
+    margin-top: 20px;
+}
+.popup-product{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    width: 49%;
+    float: left;
+}
+.popup-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.popup-product .popup-img img{
+    margin: 10px 0px;
+    width: 100px;
+    background-size: cover;
+    height: 100px;
+}
+.popup-thanhtoan{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    width: 49%;
+    float: right;
+}
+.popup-payment{
+    padding: 10px;
+}
+input{
+    width: 95%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.magiamgia{
+    width: 300px;
+    margin: 0;
+    padding: 20px;
+    height: 40px;
+}
+label{
+    font-weight: bold;
+    
+}
+select{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+#giamgia{
+    display: flex;
+    margin: 10px;
+}
+
+.popup-form .apdung{
+    width: 120px;
+    height: 40px;
+    margin: 0px 5px;
+    border: none;
+    background-color: rgb(27, 158, 27);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.popup-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-button{
+    margin-top: auto;
+}
+#closePopup,
+#confirmPopup{
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: blue;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+#confirmPopup{
+    float: right;
+    background-color: red;
+}

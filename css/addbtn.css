@@ -1,0 +1,25 @@
+  /* khi hover vào ảnh xuất hiện btn */
+  .product-item {
+    position: relative;
+}
+
+.add-btn {
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(50%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.add-btn i{
+    font-size: 30px;
+    color: #fff;
+    margin: 10px;
+}
+
+.product-item:hover .add-btn {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+}

@@ -1,0 +1,229 @@
+.img {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #hover-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .img:hover #hover-image {
+    display: block;
+  }
+  .section3 {
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 100px; */
+}
+.logo{
+  position: relative;
+}
+.line{
+  width: 30%;
+  height: 2px;
+  background-color: black;
+  transform: rotate(60deg);
+  transform-origin: top left;
+  position: absolute;
+  top: 1%;
+  left:10%;
+}
+.line4{
+  width: 30%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(120deg);
+  transform-origin: top left;
+  position: absolute;
+  top: 1%;
+  left:100%;
+}
+.line0{
+  width: 30%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(60deg);
+  transform-origin: top right;
+  position: absolute;
+  top: 0%;
+  left:69%;
+}
+.line1{
+  width: 90%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  right: 90%;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+.line5{
+  width: 75%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  right: -73%;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+.line2{
+  width: 30%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(120deg);
+  transform-origin: top right;
+  position: absolute;
+  top: 1%;
+  right:90%;
+}
+.line3{
+  width: 60%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  right: 16%;
+  top: -28%;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.hr{
+  width: 9%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(120deg);
+  transform-origin: top right;
+  position: absolute;
+  right: 26%;
+  top: 50%;
+}
+.hr2{
+  width: 9%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(60deg);
+  transform-origin: top left;
+  position: absolute;
+  right: 26%;
+  top: 50%;
+}
+.hr5{
+  width: 9%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(60deg);
+  transform-origin: top left;
+  position: absolute;
+  right: 23.25%;
+  top: 21%;
+}
+.hr0{
+  width: 10%;
+  height: 2.5px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  right: 11.7%;
+  top: 34.5%;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+.hr1{
+  width: 10%;
+  height: 2.5px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  right: 35%;
+  top: 50%;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+.hr3{
+  width: 11.4%;
+  height: 2.5px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  right: 33.59%;
+  top: 55%;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+.hr4{
+  width: 12.5%;
+  height: 2.5px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  right: 32.2%;
+  top: 60%;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+.hr6{
+  width: 12.5%;
+  height: 2.5px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  right: 32.2%;
+  top: 20.9%;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.sologan::before {
+  position: absolute;
+  content: "'Với logo gạch đá của chúng tôi, chúng tôi mang đến không gian đẹp với vẻ lạnh lùng, chắc chắn nhưng vẫn ấm áp.'";
+  bottom: -20%;
+  left: -60%;
+  width: 280%;
+  transform: translateX(-10%);
+  color: white;
+}
+
+.phone::before{
+  content: "Gọi Ngay : 0333376951";
+  position: absolute;
+  font-size: 30px;
+  left: -30%;
+  bottom: -100%;
+  white-space: nowrap;
+  color: white;
+}
+.mail::before{
+  content: "Gmail : ntpmonster@gmail.com";
+  position: absolute;
+  font-size: 30px;
+  left: -30%;
+  bottom: -125%;
+  white-space: nowrap;
+  color: white;
+}
+.sologan2,
+.socia{
+  margin: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+.socia a i{
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+
+
