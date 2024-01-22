@@ -232,4 +232,6 @@ http.onload = function() {
         document.querySelector('.prd-item2').innerHTML = outputDonGian;
         document.querySelector('.prd-item3').innerHTML = outputAmCung;
     }
+
+    addToCart();
 }

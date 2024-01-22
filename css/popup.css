@@ -2,7 +2,7 @@
     position: fixed;
     left: 110%;
     width: 85%;
-    height: 80%;
+    height: auto;
     box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.6);
     background-color: white;
     display: none;
@@ -53,12 +53,15 @@
     width: 49%;
     float: left;
 }
-.popup-items{
+.popup-items {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-}
+    height: auto;
+    overflow: auto;
+    max-height: 450px;
+  }
 .popup-product .popup-img img{
     margin: 10px 0px;
     width: 100px;
@@ -133,4 +136,8 @@ select{
 #confirmPopup{
     float: right;
     background-color: red;
+}
+.hienThiSp{
+    overflow: scroll;
+    height: 30%;
 }
