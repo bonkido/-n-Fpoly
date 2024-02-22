@@ -14,13 +14,22 @@
     <link rel="stylesheet" href="./css/img.css">
     <link rel="stylesheet" href="./css/spchitiet.css">
 
-
     <title>Thế giới gạch ốp - Gạch Ốp Lát</title>
+
     <link rel="shortcut icon" href="./image/logothegioigach.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
- 
+    
+    <!-- thư viện drivejs hướng dẫn mới đầu vào  -->
     <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
+
+    <!-- thư viên sweetalert thông báo đẹp  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- thư viên db json -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
 </head>
 
@@ -62,8 +71,9 @@
 
 <body>
 
+
     <div class="container-run">
-        <h2 class="running-text" style="color: white;">Quý khách chào mừng đã đến với website thế giới gạch </h2>
+        <h2 class="running-text" style="color: white;">Chào mừng đến với website Thế Giới Gạch - Nhập mã <b style="color: red;">xinchao</b> để giảm 30% cho mỗi đơn hàng</h2>
     </div>
 
     <div class="wrapper">
@@ -71,7 +81,7 @@
         <section class="section section1" style="background-image: url(/image/bg-g1.png);">
             <div class="header">
                 <div class="home">
-                    <button>thegioigach.com</button>
+                    <button>thegioigach.vn</button>
                 </div>
                 <div class="watching">
                     <a href="#">
@@ -124,9 +134,9 @@
                         <span id="cartIcon"></span>
                         <a href="#">Yêu thích</a>
                     </div>
-                    <div class="icon taikhoan">
+                    <div class="icon taikhoan"  onclick=" openProfile()">
                         <i class="fa-solid fa-user"></i>
-                        <a href="#">Tài khoản</a>
+                        <a href="#" id="cartProfile">Tài khoản</a>
                     </div>
                 </div>
                 <!-- cửa sổ popup chi tiết  -->
@@ -146,24 +156,18 @@
 
                             <div class="prd-price">
                                 <span>Giá sản phẩm : </span>
-                                <span class="price-chitietsp">10.000.000 VNĐ</span>
+                                <span class="price-chitietsp">23.000 VNĐ</span>
                             </div>
 
                             <div class="item-quantity-buy">
-                                <div class="item-quantity">
-                                    <span>Số lượng: </span>
-                                    <input type="number" value="1" min="1">
-                                </div>
-                                <div class="item-buy">
-                                    <input type="button" value="Mua ngay">
-                                </div>
+                                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
                             </div>
 
                             <div class="item-thongtin">
                                 <ul>
-                                    <li>Thiết kế bavi chuẩn chất lượng</li>
-                                    <li>Hình in sắc nét</li>
-                                    <li>Miếng gạch êm ai dể chịu</li>
+                                    <li style="padding-bottom: 10px;">- Thiết kế bavi chuẩn chất lượng</li>
+                                    <li style="padding-bottom: 10px;">- Hình in sắc nét</li>
+                                    <li>- Miếng gạch êm ai dể chịu</li>
                                 </ul>
                             </div>
 
@@ -171,7 +175,7 @@
 
                         <div class="prd-right">
 
-                            <div class="prd-name">
+                            <div class="prd-name" style="padding: 10px;">
                                 <h3 style="color: black; font-size: 29px;">Đá Nhung Ốp Tường </h3>
                                 <div class="prd-name-flex">
                                     <span>Mã sản phẩm : <strong>DPT01</strong></span>
@@ -181,16 +185,66 @@
                                 </div>
                             </div>
 
-                            <div class="prd-container">
+                            <div class="prd-container" style="margin-top: 10px;">
 
                                 <div class="prd-container-left">
                                     <div class="prd-container-left-items">
 
                                         <div class="left-item-comment">
-                                            <form class="f-bl">
-                                                <textarea name="" id="" cols="65" rows="3"
-                                                    placeholder="bình luận"></textarea>
-                                            </form>
+                                            
+                                            <div class="messageBox">
+                                                <div class="fileUploadWrapper">
+                                                  <label for="file">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 337 337">
+                                                      <circle
+                                                        stroke-width="20"
+                                                        stroke="#6c6c6c"
+                                                        fill="none"
+                                                        r="158.5"
+                                                        cy="168.5"
+                                                        cx="168.5"
+                                                      ></circle>
+                                                      <path
+                                                        stroke-linecap="round"
+                                                        stroke-width="25"
+                                                        stroke="#6c6c6c"
+                                                        d="M167.759 79V259"
+                                                      ></path>
+                                                      <path
+                                                        stroke-linecap="round"
+                                                        stroke-width="25"
+                                                        stroke="#6c6c6c"
+                                                        d="M79 167.138H259"
+                                                      ></path>
+                                                    </svg>
+                                                    <span class="tooltip">Add an image</span>
+                                                  </label>
+                                                  <input type="file" id="file" name="file" />
+                                                </div>
+                                                <input required="" placeholder="Bình luận ..." type="text" id="messageInput"/>
+                                             
+                                                <button id="sendButton">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 664 663">
+                                                      <path
+                                                        fill="none"
+                                                        d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+                                                      ></path>
+                                                      <path
+                                                        stroke-linejoin="round"
+                                                        stroke-linecap="round"
+                                                        stroke-width="33.67"
+                                                        stroke="#6c6c6c"
+                                                        d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+                                                      ></path>
+                                                    </svg>
+                                                  </button>
+                                            
+                                            </div>
+                                              
+                                        </div>
+
+                                        <div id="showComment">
+                                            
                                         </div>
 
                                         <div class="left-item-showcomment">
@@ -198,17 +252,16 @@
                                                 <div class="anhvaten3cham">
                                                     <div class="anhvaten">
 
-                                                        <img src="./image/avatar.jpg" alt="avatr ảnh đại diện bình luận"
+                                                        <img src="./image/backup.png" alt="avatr ảnh đại diện bình luận"
                                                             width="50px" height="50px" style="border-radius: 50%;">
 
                                                         <div class="text">
-                                                            <span style="font-weight: bold;font-size: 18px;">Nguyễn
-                                                                Thiên Phú</span>
+                                                            <span style="font-weight: bold;font-size: 18px;">Tiểu Tam</span>
                                                             <p style="font-size: 10px; font-weight: 200;">19/1/2024 -
                                                                 6:12:30</p>
                                                         </div>
-                                                    </div>
 
+                                                    </div>
                                                     <div class="bacham">
                                                         <span>...</span>
                                                         <div class="dropdown-menu">
@@ -221,45 +274,7 @@
                                                 </div>
                                             </div>
                                             <div class="comment">
-                                                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-                                                    tempore quo magnam, sunt incidunt rerum iusto esse ab repudiandae!
-                                                    Dolorem dicta molestias incidunt architecto consectetur perspiciatis
-                                                    fugit rem suscipit quae!</span>
-                                            </div>
-                                        </div>
-                                        <div class="left-item-showcomment">
-                                            <div class="showcomment">
-                                                <div class="anhvaten3cham">
-                                                    <div class="anhvaten">
-
-                                                        <img src="./image/avatar.jpg" alt="avatr ảnh đại diện bình luận"
-                                                            width="50px" height="50px" style="border-radius: 50%;">
-
-                                                        <div class="text">
-                                                            <span style="font-weight: bold;font-size: 18px;">Nguyễn
-                                                                Thiên Phú</span>
-                                                            <p style="font-size: 10px; font-weight: 200;">19/1/2024 -
-                                                                6:12:30</p>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="bacham">
-                                                        <span>...</span>
-                                                        <div class="dropdown-menu">
-                                                            <!-- Nội dung của drop-down menu -->
-                                                            <a href="#">Sửa</a>
-                                                            <a href="#">Xóa</a>
-                                                            <a href="#">Ghim</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="comment">
-                                                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-                                                    tempore quo magnam, sunt
-                                                    incidunt rerum iusto esse ab repudiandae! Dolorem dicta molestias
-                                                    incidunt architecto consectetur
-                                                    perspiciatis fugit rem suscipit quae!</span>
+                                                <span>bình luận và đặt vấn đề của bạn ngay ?</span>
                                             </div>
                                         </div>
 
@@ -345,14 +360,38 @@
                                 </div>
 
                                 <div class="popup-free">
-                                    <div class="popup-form">
-                                        <form action="" id="giamgia" style="margin:auto; width: 90%;">
+                                    <div class="popup-form" id="giamgia"style="margin:auto; width: 90%;">
+                                            
                                             <input class="magiamgia" type="text" name="maGiamGia" id="maGiamGia"
                                                 placeholder="Nhập mã giảm giá" style="padding: 19px; width: 100%;">
+
                                             <button class="apdung">Áp dụng</button>
-                                        </form>
+
                                     </div>
                                 </div>
+                                <script>
+
+                                    var isCodeEntered = false; // Biến cờ để kiểm tra xem mã đã được nhập hay chưa
+
+                                    document.querySelector('.apdung').addEventListener('click', function() {
+                                        if (!isCodeEntered) { // Kiểm tra xem mã đã được nhập hay chưa
+                                            var magiamgia = document.querySelector('#maGiamGia').value;
+                                            var tongTienElement = document.querySelector('#tongTien');
+                                            var tongTien = parseFloat(tongTienElement.innerHTML);
+
+                                            if (magiamgia === 'xinchao') {
+                                                var hientongtien = tongTien - (tongTien * 0.3);
+                                                tongTienElement.innerHTML = hientongtien.toFixed(3) + ' VND';
+
+                                                isCodeEntered = true; // Đánh dấu rằng mã đã được nhập
+                                                
+                                            } else {
+                                                alert('Mã giảm giá không đúng hoặc sai');
+                                            }
+                                        }
+                                    });
+
+                                </script>
 
                                 <div class="popup-total">
                                     <h4 style="font-size: 18px; margin: 20px;">
@@ -367,13 +406,13 @@
                                 <div class="popup-payment">
                                     <h3>Thông tin thanh toán</h3>
                                     <div class="popup-form">
-                                        <form action="">
-                                            <input type="text" name="name" id="name" placeholder="Nhập tên của bạn">
-                                            <input type="text" name="name" id="name"
+                                        <input type="text" name="nameCart" id="nameCart" placeholder="Nhập tên của bạn">
+                                        <form>
+                                            <input type="text" name="phoneCart" id="phoneCart"
                                                 placeholder="Nhập số điện thoại của bạn">
-                                            <input type="email" name="name" id="name" placeholder="Nhập gmail của bạn"
+                                            <input type="email" name="emailCart" id="emailCart" placeholder="Nhập gmail của bạn"
                                                 required checked>
-                                            <input type="text" name="name" id="name" placeholder="Nhập địa chỉ của bạn">
+                                            <input type="text" name="adressCart" id="adressCart" placeholder="Nhập địa chỉ của bạn">
 
                                             <label for="district">Quận/Huyện:</label>
                                             <select id="district" name="district">
@@ -439,12 +478,220 @@
                         </div>
                         <div class="popup-button">
                             <button id="closePopup">Đóng</button>
-                            <button id="confirmPopup">Tiếp Theo</button>
+                            <button id="confirmPopup" onclick=" openConfirm()">Tiếp Theo</button>
                         </div>
                     </div>
                 </div>
                 <!-- End cửa sổ popup hiển thị nội dung  -->
 
+                <!-- cửa sổ popup hiển thị xác nhận thông tin thanh toán -->
+                <div id="popupConfirm" class="confirm">
+                    <div class="popup-content-confirm">
+                        <div class="popup-tab">
+                            <a href="#" class="popup-cart active">
+                                <h3>Giỏ hàng</h3>
+                            </a>
+                            <a href="#" class="popup-checkout">
+                                <h3>|</h3>
+                            </a>
+                            <a href="#" class="popup-pay">
+                                <h3>Thanh toán</h3>
+                            </a>
+                        </div>
+                
+                        <div class="main-confirm">
+                            <div class="main-confirm-left">
+                                <h3 class="xacnhanthongtin">Xác nhận thông tin</h3>
+                                <div class="confirm-profile">
+                                    <div class="confirm-name">
+                                        <label for="">Tên của bạn :</label>
+                                        <span class="changeNameConfirm"></span>
+                                    </div>
+                                    <div class="confirm-phone">
+                                        <label for="">Số điện thoại :</label>
+                                        <span class="changePhoneConfirm"></span>
+                                    </div>
+                                    <div class="confirm-gmail">
+                                        <label for="">Gmail :</label>
+                                        <span class="changeEmailConfirm"></span>
+                                    </div>
+                                    <div class="confirm-adr">
+                                        <label for="">Địa chỉ nhận hàng :</label>
+                                        <span class="changeAdrConfirm"></span>
+                                    </div>
+                                    <div class="confirm-ghichu">
+                                        <label for="">Ghi chú : </label>
+                                        <textarea name="" id="" cols="10" rows="3" placeholder="ghi chú cho admin"></textarea>
+                                    </div>
+                                    <div class="confirm-thanhtoan">
+                                        <input type="checkbox" name="" id="" style="width: 30px;">Bạn đã đọc kỹ thông tin trước khi thanh toán
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-confirm-right" style="text-align: center; display: flex; align-items: center;">
+                                <img src="./image/maQr.jpg" alt="" style="width: 300px; padding-left: 10px; background-size: cover;">
+                                <div class="text-right-confirm" style="padding-left: 10px;">
+                                    <span style="white-space: nowrap;"> * Quét mã QR để tiến hành thanh toán</span>
+                                   <div class="hieuluc-confirm" style="padding-top: 10px;">
+                                    <p>Mã còn hiệu lực trong : </p>
+                                    <span style="color: red; font-size: 20px; font-weight: bold;" id="coutnDown">20:00</span>
+                                   </div>
+                                   <p style="padding-top: 20px;"> * Nếu xảy ra sự cố khi thanh toán , vui lòng liên hệ <a href="#" style="color: rgb(49, 49, 181); font-weight: 700;"> bộ phận admin</a> để được giải quyết nhanh nhất .</p>
+                                   <p style="padding-top: 20px;">
+                                    * Sau khi thanh toán thành công vui lòng vào <a href="#" style="color: rgb(49, 49, 181); font-weight: 700;">Tài khoản</a> để kiểm tra đơn hàng của bạn .
+                                   </p>
+                                   <p style="padding-top: 20px;">
+                                    * Mỗi đơn hàng không đăng nhập khi thanh toán sẽ được sinh ra <b> id ngẫu nhiên </b> khi thanh toán thành công , người dùng có thể sự dụng id đó để đăng nhập và nhận nhiều ưu đãi .
+                                    </p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="popup-button">
+                            <button id="closePopup" onclick="closeConfirm() ">Đóng</button>
+                            <button id="confirmPopup" class="xacnhancart" onclick="thongbaothanhcong()">Xác nhận</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.querySelector('.xacnhancart').addEventListener('click', () => {
+                    // Lấy thông tin từ các phần tử trên popup
+                    var nameCart = document.querySelector('.changeNameConfirm').textContent;
+                    var phoneCart = document.querySelector('.changePhoneConfirm').textContent;
+                    var emailCart = document.querySelector('.changeEmailConfirm').textContent;
+                    var totalCart = document.querySelector('#tongTien').textContent;
+                    var addressCart = document.querySelector('.changeAdrConfirm').textContent;
+                    var noteCart = document.querySelector('.confirm-ghichu textarea').value;
+
+                    // tên sản phẩm
+                    var orderCart = document.querySelectorAll('.popup-name');
+                    // Khai báo biến để lưu chuỗi kết quả
+                    let combinedContent = "";
+                    // Lặp qua từng phần tử trong NodeList
+                    for (let i = 0; i < orderCart.length; i++) {
+                    // Lấy nội dung bên trong của phần tử và loại bỏ khoảng trắng không mong muốn
+                    let content = orderCart[i].textContent.trim();
+                    // Cộng chuỗi các phần tử lại với nhau
+                    combinedContent += content + " ";
+                    }         
+                    
+                  // Số lượng sản phẩm trong giỏ hàng
+                    var quantityCart = document.querySelectorAll('#quantity-cart');
+                    // Lưu trữ tổng số lượng ban đầu
+                    let initialQuantity = 0;
+                    // Lặp qua từng phần tử trong NodeList để tính tổng số lượng ban đầu
+                    for (let i = 0; i < quantityCart.length; i++) {
+                    let quantity = parseInt(quantityCart[i].value);
+                    initialQuantity += quantity;
+                    }
+                    // Cập nhật tổng số lượng sau khi thêm sản phẩm mới
+                    let totalQuantity = initialQuantity;
+  
+                    // Tạo đối tượng hóa đơn
+                    var invoiceInfo = {
+                        name: nameCart,
+                        phone: phoneCart,
+                        gmail: emailCart,
+                        total: totalCart,
+                        adress: addressCart,
+                        note: noteCart,
+                        quantity : totalQuantity,
+                        order: JSON.stringify(combinedContent.trim()),
+                        position : "Khách hàng",
+                        active : "Chờ duyệt"
+                    };
+
+                    // Gửi yêu cầu lưu thông tin hóa đơn lên máy chủ
+                    fetch('http://localhost:3000/Orders', {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(invoiceInfo)
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                        console.log('Đã lưu thông tin hóa đơn vào db.json:', data);
+                        // Thực hiện các hành động khác sau khi lưu thành công
+                        })
+                        .catch(error => {
+                        console.error('Lỗi khi lưu thông tin hóa đơn:', error);
+                        // Xử lý lỗi nếu cần thiết
+                        });
+                    });
+                  function thongbaothanhcong() {
+                        Swal.fire({
+                            title: "Thanh toán thành công!",
+                            text: "Kiểm tra đơn hàng ngay!",
+                            icon: "success"
+                        }).then(() => {
+                            window.location.reload();
+                        });
+                    }
+                </script>
+                <!-- end cửa sổ popup hiển thị xác nhận thông tin thanh toán -->
+
+                <!-- cửa sổ popup hiển thị profile -->
+                <div class="container-profile" id="popupProfile">
+                    <div class="ctn-left">
+                        <div class="content-profile">
+                            <ul>
+                                <li>
+                                    <div class="avatar">
+                                        <img class="avatarImg" src="./image/avatar.jpg" alt="" >
+                                        <span class="avatarName">Nguyễn Thiên Phú</span>
+                                    </div>
+                                </li>
+                            </ul>
+                                <hr>
+                            <ul class="menuleft">
+                                <li class="active-profile"> <i class="fa-solid fa-user icon-profile"></i> Thông tin tài khoản</li>
+                                <li> <i class="fa-solid fa-location-dot icon-profile"></i>  Sổ địa chỉ</li>
+                                <li> <i class="fa-solid fa-briefcase icon-profile"></i> Quản lý đơn hàng</li>
+                                <li> <i class="fa-solid fa-heart icon-profile"></i> Sản phẩm yêu thích</li>
+                                <li> <i class="fa-solid fa-share icon-profile"></i> Đăng xuất</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ctn-right">
+                        <h3 class="thongtintaikhoan">Thông tin tài khoản</h3>
+                        <ul>
+                            <li>
+                                <label for="">Họ tên</label>
+                                <div class="form-input">
+                                    <input class="nameInput" type="text" placeholder="Nguyễn Thiên Phú">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">Giới tính</label>
+                                <div class="form-input">
+                                    <input type="radio"> Nam
+                                    <input type="radio"> Nữ
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">Số điện thoại</label>
+                                <div class="form-input">
+                                    <input type="tel" placeholder="Số điện thoại">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">Email</label>
+                                <div class="form-input">
+                                    <input type="email" placeholder="Email của bạn">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">Ngày sinh</label>
+                                <div class="form-input">
+                                    <input type="date">
+                                </div>
+                            </li>
+                            <input type="submit" value="Xác nhận" class="submit-profile">
+                        </ul>
+                    </div>
+                    <button class="close-profile" onclick="closeProfile()">Đóng</button>
+                </div>
+                <!-- end cửa sổ popup hiển thị profile -->
             </div>
 
             <!-- hiển thị sản phẩm từ products.json -->
@@ -699,5 +946,11 @@
 <script src="./js/cart.js"></script>
 
 <script src="./js/driver.js"></script>
+
+<script src="./js/confirm.js"></script>
+
+<script>
+  
+</script>
 
 </html>

@@ -24,3 +24,27 @@ function dongPopup() {
 
 // hiển thị popup chi tiết sản phẩm  END 
 
+
+// hiển thị profile 
+function openProfile(){
+    var popupProfile = document.getElementById("popupProfile");
+    popupProfile.style.display = "block";
+}
+
+function closeProfile() {
+    var popupProfile = document.getElementById("popupProfile");
+    popupProfile.style.display = "none";
+}
+// end hiển thị profile 
+
+// hiển thị xác nhận thông tin thanh toán
+function openConfirm(){
+    var popupConfirm = document.querySelector(".confirm");
+    popupConfirm.style.display = "block";
+}
+
+function closeConfirm() {
+    var popupConfirm = document.querySelector(".confirm");
+    popupConfirm.style.display = "none";
+}
+// end  hiển thị xác nhận thông tin thanh toán

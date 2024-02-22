@@ -1,13 +1,16 @@
 
 let http = new XMLHttpRequest();
 
-http.open('GET', 'products.json', true);
+http.open('GET', 'db.json', true);
 
 http.send();
 
 http.onload = function() {
     if (this.readyState == 4 && this.status == 200) {
-        let products = JSON.parse(this.responseText);
+        let data = JSON.parse(this.responseText);
+        let products = data.Products; // Lấy danh sách sản phẩm từ thuộc tính "Products"
+
+        // let products = JSON.parse(this.responseText);
         let outputGach = "";
         let outputDa = "";
         let outputHienDai = "";
@@ -20,11 +23,7 @@ http.onload = function() {
         let countAmCung = 0;
 
         for (let item of products) {
-            // if (countGach + countGo === 8) {
-            //     break;
-            // }
-           
-            if (item.material === "da") {
+            if (item.material === "đá") {
                 if (countDa < 8) {
                     outputDa += `
                     <div class="product-item">
@@ -105,7 +104,7 @@ http.onload = function() {
                     countGach++;
                 } 
             }
-            if(item.material === "hiendai"){
+            if(item.material === "hiện đại"){
                 if (countHienDai < 8) {
                     outputHienDai += `
                     <div class="product-item">
@@ -144,7 +143,7 @@ http.onload = function() {
                     `;
                     countHienDai++;
                 } 
-            }else if(item.material === "dongian"){
+            }else if(item.material === "đơn giản"){
                 if (countDonGian < 8) {
                     outputDonGian += `
                     <div class="product-item">
@@ -183,7 +182,7 @@ http.onload = function() {
                     `;
                     countDonGian++;
                 } 
-            }else if(item.material === "amcung"){
+            }else if(item.material === "ấm cúng"){
                 if (countAmCung < 8) {
                     outputAmCung += `
                     <div class="product-item">

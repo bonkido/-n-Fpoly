@@ -141,3 +141,163 @@ select{
     overflow: scroll;
     height: 30%;
 }
+
+/* popup confirm */
+.confirm {
+    position: fixed;
+    left: 110%;
+    width: 85%;
+    height: 80%;
+    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.6);
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+}
+.popup-content-confirm {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.main-confirm{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+.main-confirm-left{
+    float: left;
+    border-right: 1px solid;
+    width: 40%;
+}
+.xacnhanthongtin{
+    margin-bottom: 10px;
+}
+.main-confirm-right{
+    float: left;
+    width: 50%;
+}
+.confirm-profile label{
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.confirm-profile div{
+    padding: 10px 0;
+}
+.confirm-profile span{
+    color: rgb(206, 0, 0);
+    font-weight: bold;
+}
+.confirm-ghichu textarea{
+    width: 95%;
+    padding: 5px;
+}
+/* end popup confirm */
+
+/* bình luận  */
+.messageBox {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(63, 63, 63);
+    color: #000;
+  }
+  .messageBox:focus-within {
+    border: 1px solid rgb(110, 110, 110);
+  }
+  .fileUploadWrapper {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #file {
+    display: none;
+  }
+  .fileUploadWrapper label {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .fileUploadWrapper label svg {
+    height: 18px;
+  }
+  .fileUploadWrapper label svg path {
+    transition: all 0.3s;
+  }
+  .fileUploadWrapper label svg circle {
+    transition: all 0.3s;
+  }
+  .fileUploadWrapper label:hover svg path {
+    stroke: #fff;
+  }
+
+  .fileUploadWrapper label:hover .tooltip {
+    display: block;
+    opacity: 1;
+  }
+  .tooltip {
+    position: absolute;
+    top: -40px;
+    display: none;
+    opacity: 0;
+    color: white;
+    font-size: 10px;
+    text-wrap: nowrap;
+    background-color: #000;
+    padding: 6px 10px;
+    border: 1px solid #3c3c3c;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.596);
+    transition: all 0.3s;
+  }
+  #messageInput {
+    width: 2500px;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    color: rgb(0, 0, 0);
+  }
+  #messageInput:focus ~ #sendButton svg path,
+  #messageInput:valid ~ #sendButton svg path {
+    fill: #3c3c3c;
+    stroke: white;
+  }
+  
+  #sendButton {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  #sendButton svg {
+    height: 18px;
+    float: right;
+    transition: all 0.3s;
+  }
+  #sendButton svg path {
+    transition: all 0.3s;
+  }
+  #sendButton:hover svg path {
+    fill: #3c3c3c;
+    stroke: white;
+  }
+/* end bình luận    */

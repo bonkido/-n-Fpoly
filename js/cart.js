@@ -22,7 +22,7 @@ function addToCart() {
 
             addSp(productName, productImage1, productPrice);
             updateCartCount();
-            console.log('Thêm sản phẩm thành công');
+            // console.log('Thêm sản phẩm thành công');
         }
     });
 }
@@ -120,7 +120,7 @@ function TongCart() {
     });
 
     var formattedTotal = total.toLocaleString('vi-VN');
-    document.querySelector('#tongTien').innerText = formattedTotal + '.000 VND';
+    document.querySelector('#tongTien').innerText = formattedTotal + '.000';
 }
 
 // Gọi hàm addToCart() để thêm sự kiện click cho các nút "add-to-cart"
