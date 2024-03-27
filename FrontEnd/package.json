@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "generate": "^0.14.0",
+    "typescript": "^5.4.3"
+  }
+}

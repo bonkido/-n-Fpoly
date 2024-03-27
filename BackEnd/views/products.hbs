@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/stylesheets/node.css">
+<table border="1" id="table_sampling">
+    <a href="/product/creat">
+        <input type="submit" value="Thêm sản phẩm" id="addProduct">
+    </a>
+    <thead>
+        <tr>
+            <th>_id</th>
+            <th>Name</th>
+            <th>Image1</th>
+            <th>Image2</th>
+            <th>Price</th>
+            <th>Material</th>
+            <th>Quantity</th>
+            <th>Title</th>
+            <th>Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{name}}</td>
+            <td><img src="/images/{{image1}}" alt="" width="100px" height="100px"></td>
+            <td><img src="/images/{{image2}}" alt="" width="100px" height="100px"></td>
+            <td>{{price}}.000 VND</td>
+            <td>{{material}}</td>
+            <td>{{quantity}}</td>
+            <td>{{title}}</td>
+            <td>
+                <a href="product/delete/{{_id}}">Xóa</a> 
+                <a href="product/edit/{{_id}}">Sửa</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+

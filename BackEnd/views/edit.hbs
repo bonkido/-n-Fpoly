@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/stylesheets/node.css">
+<div class="form_container">
+    <form id="form_Product" method="post" action="fix/{{product._id}}?_method=PUT">
+        <h1>FIX PRODUCT</h1>
+
+        <label for="nameProduct">Tên sản phẩm</label>
+        <input type="text" id="nameProduct" name="name" value="{{product.name}}">
+
+        <label for="image1">Ảnh 1</label>
+        <input type="file" name="image1" id="image1">
+        <img src="/images/{{product.image1}}" alt="Image 1" width="100px" height="100px">
+
+        <label for="image2">Ảnh 2</label>
+        <input type="file" name="image2" id="image2">
+        <img src="/images/{{product.image2}}" alt="Image 2" width="100px" height="100px">
+
+        <label for="price">Giá sản phẩm</label>
+        <input type="text" name="price" id="price" value="{{product.price}}">
+
+        <label for="material">Chất liệu</label>
+        <select name="material" id="material">
+            <option value="{{product.material}}">{{product.material}}</option>
+            <option value="gạch">Gạch</option>
+            <option value="đá">Đá</option>
+            <option value="hiện đại">Hiện đại</option>
+            <option value="ấm cúng">Ấm cúng</option>
+            <option value="đơn giản">Đơn giản </option>
+        </select>
+
+        <label for="quantityProduct">Số lượng</label>
+        <input type="number" name="quantity" id="quantityProduct" value="{{product.quantity}}">
+
+        <label for="titleProduct">Tiêu đề</label>
+        <textarea name="title" id="titleProduct" cols="40" rows="5">{{product.title}}</textarea>
+
+        <input type="submit" value="Sửa Ngay" id="addProduct">
+    </form>
+</div>

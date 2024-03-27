@@ -1,0 +1,300 @@
+{
+  "Products": [
+    {
+      "id": "1",
+      "name": "Gạch thẻ",
+      "image1": "da1-1.jpg",
+      "image2": "gachthe1.jpg",
+      "price": "25.000",
+      "material": "gạch",
+      "quantity": 0,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "2",
+      "name": "Gạch nhung",
+      "image1": "da-nhung-op-tuong.jpg",
+      "image2": "gachnhung1.jpg",
+      "price": "15.000",
+      "material": "hiện đại",
+      "quantity": 600,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "3",
+      "name": "Gạch đá",
+      "image1": "gach-da.jpg",
+      "image2": "gachda1.jpg",
+      "price": "22.000",
+      "material": "hiện đại",
+      "quantity": "10",
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "4",
+      "name": "Gạch ốp gỗ",
+      "image1": "gach-op-go.jpg",
+      "image2": "gachopgo1.jpg",
+      "price": "29.000",
+      "material": "hiện đại",
+      "quantity": "0",
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "5",
+      "name": "Gạch ốp gỗ",
+      "image1": "gach-op-go.jpg",
+      "image2": "gachopgo1.jpg",
+      "price": "29.000",
+      "material": "ấm cúng",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "6",
+      "name": "Gạch ốp",
+      "image1": "gach1.jpg",
+      "image2": "gach1-1.jpg",
+      "price": "10.000",
+      "material": "đơn giản",
+      "quantity": 990,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "7",
+      "name": "Gạch ngựa ",
+      "image1": "gach2.jpg",
+      "image2": "gachngua1.jpg",
+      "price": "42.000",
+      "material": "gạch",
+      "quantity": "480",
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "8",
+      "name": "Gạch xước",
+      "image1": "gach3.jpg",
+      "image2": "gachxuoc1.jpg",
+      "price": "8.000",
+      "material": "đơn giản",
+      "quantity": "400",
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "9",
+      "name": "Đá thẻ",
+      "image1": "da-the-op-tuong.jpg",
+      "image2": "gachthe1.jpg",
+      "price": "28.000",
+      "material": "hiện đại",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "10",
+      "name": "Đá nhung",
+      "image1": "gach-da.jpg",
+      "image2": "gachda1.jpg",
+      "price": "28.000",
+      "material": "đơn giản",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "11",
+      "name": "Đá vui vẻ",
+      "image1": "davuive.jpg",
+      "image2": "davuive1.jpg",
+      "price": "17.000",
+      "material": "đá",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "12",
+      "name": "Đá nức",
+      "image1": "danuc.jpg",
+      "image2": "danuc1.jpg",
+      "price": "20.000",
+      "material": "đá",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "13",
+      "name": "Đá nhung",
+      "image1": "dachetunhien.jpg",
+      "image2": "dachetunhien1.jpg",
+      "price": "30.000",
+      "material": "đá",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "14",
+      "name": "Đá 3d",
+      "image1": "gach3d.jpg",
+      "image2": "gach3d1.jpg",
+      "price": "17.000",
+      "material": "đá",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "15",
+      "name": "Đá bàn phím",
+      "image1": "dabanphim.jpg",
+      "image2": "dabanphim1.jpg",
+      "price": "20.000",
+      "material": "đá",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "16",
+      "name": "Đá gạch",
+      "image1": "dasang.jpg",
+      "image2": "dasang1.jpg",
+      "price": "30.000",
+      "material": "đá",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "17",
+      "name": "Gạch đen cao cấp",
+      "image1": "hiendai.jpg",
+      "image2": "hiendai1.jpg",
+      "price": "40.000",
+      "material": "hiện đại",
+      "quantity": 0,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "18",
+      "name": "Gạch tứ giác",
+      "image1": "hiendai2.jpg",
+      "image2": "hiendai2-2.jpg",
+      "price": "30.000",
+      "material": "hiện đại",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "19",
+      "name": "Ốp nền lân",
+      "image1": "hiendai3.jpg",
+      "image2": "hiendai3-3.jpg",
+      "price": "35.000",
+      "material": "hiện đại",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "20",
+      "name": "Gạch sang trọng",
+      "image1": "hiendai4.jpg",
+      "image2": "hiendai4-4.jpg",
+      "price": "40.000",
+      "material": "hiện đại",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "21",
+      "name": "Đá kì lân",
+      "image1": "da1.jpg",
+      "image2": "da1-1.jpg",
+      "price": "25.000",
+      "material": "đá",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "22",
+      "name": "Đá đỏ",
+      "image1": "da2.jpg",
+      "image2": "da2-2.jpg",
+      "price": "25.000",
+      "material": "đá",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    },
+    {
+      "id": "23",
+      "name": "Gạch loang",
+      "image1": "gach-loang.jpg",
+      "image2": "gachloang1.jpg",
+      "price": "34.000",
+      "material": "hiện đại",
+      "quantity": 400,
+      "title": "Đá thẻ ốp tường được thiết kế bằng cách mang đến màu sắc đẹp nhất và đẹp nhất với những màu sắc đẹp nhất trong thế giới"
+    }
+  ],
+  "Bill": [
+    {
+      "id": "1",
+      "name": "Nguyễn Thiên Phú",
+      "phone": "0333376951",
+      "gmail": "bonbonbon2k4@gmail.com",
+      "order": "Gạch Nhan",
+      "quantity": 90,
+      "total": "2.500.000",
+      "active": "Đang giao hàng",
+      "adress": "155-157 Trần Quốc Thảo, Quận 3, Hồ Chí Minh",
+      "birthday": "02/02/1999",
+      "gender": "nam",
+      "position": "Khách hàng",
+      "idrandom": "e682",
+      "note": "giao tới địa chỉ 60 trần hưng đạo"
+    },
+    {
+      "id": "2",
+      "name": "Nguyễn Thiên Hoàng",
+      "phone": "0123476951",
+      "gmail": "ntpmonster@gmail.com",
+      "order": "Đá Rực rỡ",
+      "quantity": 100,
+      "total": "500.000",
+      "active": "Đã hủy",
+      "adress": "155-157 Trần Quốc Thảo, Quận 3, Hồ Chí Minh",
+      "birthday": "02/02/1999",
+      "gender": "nam",
+      "position": "Khách hàng",
+      "idrandom": "e682",
+      "note": "giao tới địa chỉ 60 trần hưng đạo"
+    },
+    {
+      "id": "3",
+      "name": "Nguyễn Thanh Nhân",
+      "phone": "0102948578374",
+      "gmail": "bonbonbon2k4@gmail.com",
+      "order": "Gạch Nhan",
+      "quantity": 90,
+      "total": "2.500.000",
+      "active": "Chờ duyệt",
+      "adress": "155-157 Trần Quốc Thảo, Quận 3, Hồ Chí Minh",
+      "birthday": "02/02/1999",
+      "gender": "nam",
+      "position": "Khách hàng",
+      "idrandom": "e682",
+      "note": "giao tới địa chỉ 60 trần hưng đạo"
+    },
+    {
+      "id": "4",
+      "name": "Nguyễn Thiên Phú",
+      "phone": "0333376951",
+      "gmail": "bonbonbon2k4@gmail.com",
+      "order": "Gạch Nhan",
+      "quantity": 90,
+      "total": "2.500.000",
+      "active": "Đã hoàn thành",
+      "adress": "155-157 Trần Quốc Thảo, Quận 3, Hồ Chí Minh",
+      "birthday": "02/02/1999",
+      "gender": "nam",
+      "position": "Khách hàng",
+      "idrandom": "e682",
+      "note": "giao tới địa chỉ 60 trần hưng đạo"
+    }
+  ]
+}
