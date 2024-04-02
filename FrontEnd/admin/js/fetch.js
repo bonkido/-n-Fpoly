@@ -11,7 +11,7 @@ fetch('http://localhost:3000/product/id')
             <td width="10"><input type="checkbox" name="check1" value="1"></td>
             <td class="productId">${products._id}</td>
             <td>${products.name}</td>
-            <td><img src="/FrontEnd/admin/img-sanpham/${products.image1}" alt="" width="100px"; height="100px";></td>
+            <td><img src="/BackEnd/public/images/${products.image1}" alt="" width="100px"; height="100px";></td>
             <td>${products.quantity}</td>
             <td><span class="${products.quantity == 0 ? 'badge bg-danger' : 'badge bg-success'}">${products.quantity > 0 ? "Còn hàng" : "Hết hàng"}</span></td>
             <td>${products.price}.000 đ</td>
@@ -43,8 +43,7 @@ fetch('http://localhost:3000/product/id')
       }
     }
     return null; // Trả về null nếu không tìm thấy sản phẩm hoặc products không hợp lệ
-  }
-  
+  } 
   
 
   // Gán sự kiện click cho tất cả các phần tử
@@ -59,7 +58,7 @@ fetch('http://localhost:3000/product/id')
       
       // Tìm sản phẩm dựa trên ID
       var product = getProductById(data, idfix);
-      console.log(product);
+      // console.log(product);
 
       if (product) {
         // Cập nhật các trường trong form với thông tin sản phẩm đã tìm thấy
@@ -68,8 +67,8 @@ fetch('http://localhost:3000/product/id')
         var productQuantityInput = document.getElementById('productQuantity');
         var productPriceInput = document.getElementById('productPrice');
         var productMaterialInput = document.getElementById('productMaterial');
-        var Image1 = document.getElementById('image1');
-        var Image2 = document.getElementById('image2');
+        var Image1 = document.getElementById('Image1');
+        var Image2 = document.getElementById('Image2');
 
         // Cập nhật giá trị của các trường
         productIdInput.value = product._id;
@@ -77,12 +76,12 @@ fetch('http://localhost:3000/product/id')
         productQuantityInput.value = product.quantity;
         productPriceInput.value = product.price;
         productMaterialInput.value = product.material;
-        Image1.src = product.image1;
-        Image2.src = product.image2;
+        // Image1.src = product.image1;
+        // Image2.src = product.image2;
       } else {
         alert('Không tìm thấy sản phẩm với ID:', idfix);
       }
-
+      // console.log(product);
     });
   });
 
@@ -103,7 +102,7 @@ saveButton.addEventListener('click', function() {
   var productId = productIdInput.value;
 
   // Tìm sản phẩm trong mảng dữ liệu
-  var productToUpdate = getProductById(data.Products, productId);
+  var productToUpdate = getProductById(data, productId);
 
   if (productToUpdate) {
     // Cập nhật thông tin sản phẩm
@@ -112,11 +111,11 @@ saveButton.addEventListener('click', function() {
     productToUpdate.quantity = productQuantityInput.value;
     productToUpdate.price = productPriceInput.value;
     productToUpdate.material = productMaterialInput.value;
-    productToUpdate.image1 = Image1.src;
-    productToUpdate.image2 = Image2.src;
+    // productToUpdate.image1 = Image1.src;
+    // productToUpdate.image2 = Image2.src;
 
     // Gửi yêu cầu PUT để cập nhật dữ liệu trong db.json
-    fetch(`http://localhost:3000/product/edit/fix/:id` ,{
+    fetch(`http://localhost:3000/product/edit/fix/` + productId ,{
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -126,9 +125,21 @@ saveButton.addEventListener('click', function() {
       .then(response => response.json())
       .then(result => {
         console.log('Dữ liệu đã được cập nhật trong db.json:', result);
+        swal({
+          title: "Sửa thành công!",
+          icon: "success"
+      }).then(() => {
+          window.location.reload();
+      });
       })
       .catch(error => {
         console.error('Lỗi khi cập nhật dữ liệu:', error);
+        swal({
+          title: "Sửa thành công!",
+          icon: "success"
+      }).then(() => {
+          window.location.reload();
+      });
       });
   } else {
     alert('Không tìm thấy sản phẩm với ID: ' + productId);

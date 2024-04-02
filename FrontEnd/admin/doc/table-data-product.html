@@ -111,10 +111,10 @@
                               <a class="btn btn-delete btn-sm pdf-file" type="button" title="In" onclick="myFunction(this)"><i
                                   class="fas fa-file-pdf"></i> Xuất PDF</a>
                             </div>
-                            <div class="col-sm-2">
+                            <!-- <div class="col-sm-2">
                               <a class="btn btn-delete btn-sm" type="button" title="Xóa" onclick="myFunction(this)"><i
                                   class="fas fa-trash-alt"></i> Xóa tất cả </a>
-                            </div>
+                            </div> -->
                           </div>
                         <table class="table table-hover table-bordered" id="sampleTable">
                             <thead>
@@ -182,7 +182,7 @@ data-keyboard="false">
                   <option>ấm cúng</option>
             </select>
           </div>
-          <div class="form-group col-md-6">
+          <!-- <div class="form-group col-md-6">
             <label class="control-label">Ảnh 1</label>
             <input class="form-control" type="file" id="productImage1">
             <img src="/FrontEnd/images/" alt="" width="150px" height="150px" id="Image1">
@@ -191,7 +191,7 @@ data-keyboard="false">
             <label class="control-label">Ảnh 2</label>
             <input class="form-control" type="file" id="productImage2">
             <img src="/FrontEnd/images/" alt="" width="150px" height="150px" id="Image2">
-          </div>
+          </div> -->
       </div>
       <BR>
       <a href="#" style="    float: right;
@@ -199,7 +199,7 @@ data-keyboard="false">
     color: #ea0000;">Chỉnh sửa sản phẩm nâng cao</a>
       <BR>
       <BR>
-      <button class="btn btn-save" id="saveFixProducts" type="button" onclick="thongbaofix()">Lưu lại</button>
+      <button class="btn btn-save" id="saveFixProducts" type="button">Lưu lại</button>
       <a class="btn btn-cancel" data-dismiss="modal" href="#">Hủy bỏ</a>
       <BR>
     </div>
@@ -209,16 +209,6 @@ data-keyboard="false">
 </div>
 </div>
 
-<script>
-   function thongbaofix() {
-                        Swal.fire({
-                            title: "Sửa thành công!",
-                            icon: "success"
-                        }).then(() => {
-                            window.location.reload();
-                        });
-                    }
-</script>
 <!--
 MODAL
 -->
@@ -311,11 +301,15 @@ MODAL
           swal("Đã xóa thành công!", {
             timer: 1200, // Thời gian tự động tắt thông báo sau 1 giây
             icon: "success"
-          });
+          }).then(()=>{
+            window.location.reload(); // Tải lại trang
+          })
         } else {
           swal("Đã xóa thành công!", {
             timer: 1200, // Thời gian tự động tắt thông báo sau 1 giây
             icon: "success"
+          }).then(()=>{
+            window.location.reload(); // Tải lại trang
           });
         }
       })

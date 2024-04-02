@@ -1,6 +1,19 @@
 var express = require('express');
 var router = express.Router();
 const Product = require('../models/product');
+const multer  = require('multer')
+
+//multer 
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/images')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname)
+  }
+})
+
+const upload = multer({ storage: storage })
 
 /* GET product by ID. */
 router.get('/id', function(req, res, next) {
@@ -51,18 +64,18 @@ router.get('/', (req, res , next) => {
   .catch(next);
 });
 
-router.get('/creat', (req, res , next) => {
+router.get('/creat',  upload.array('image1'),  (req, res , next) => {
   res.render('creat');
 });
 
 router.delete('/delete/:id', (req, res , next) => {
   const productId = req.params.id;
   Product.findByIdAndDelete(productId)
-.then(() => res.redirect('/product'))
-.catch(next)
+  .then(() => res.redirect('/product'))
+  .catch(next)
 });
 
-router.post('/store', (req, res , next) => {
+router.post('/store',  upload.array('image1'),   (req, res , next) => {
   // res.json(req.body);
   const product = new Product(req.body);
   product.save()

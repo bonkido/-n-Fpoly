@@ -1,14 +1,13 @@
 <link rel="stylesheet" href="/stylesheets/node.css">
 <div class="form_container">
-    <form id="form_Product" method="post" action="/product/store">
+    <form id="form_Product" method="post" action="/product/store" enctype="multipart/form-data">
         <h1>ADD PRODUCT</h1>
 
         <label for="">Thêm sản phẩm</label>
         <input type="text" id="nameProduct" name="name"> 
 
         <label for="">Thêm Ảnh Mới</label>
-        <input type="file" name="image1" id="img">
-        <input type="file" name="image2" id="img">
+        <input type="file" name="image1" id="img" multiple>
 
         <label for="">Giá sản phẩm</label>
         <input type="text" value="" name="price" id="price">

@@ -15,7 +15,7 @@ db.connect();
 // trỏ đến file muốn in
 var productsRouter = require('./routes/products');
 var searchRouter = require('./routes/search');
-var indexRouter = require('./routes/index');
+// var indexRouter = require('./routes/index');
 
 var app = express();
 app.use(methodOverride('_method'))
@@ -33,9 +33,9 @@ app.use(express.static(path.join(__dirname, 'public'))); // kiểm tra xem join 
 app.use(morgan('combined'));
 
 // basic routing (đường dẫn trên https) ------ app.use(path,(handlebars));
-app.use('/', indexRouter);
 app.use('/search', searchRouter);
 app.use('/product', productsRouter);
+// app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

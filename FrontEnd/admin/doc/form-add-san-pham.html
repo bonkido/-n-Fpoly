@@ -206,7 +206,7 @@
                     class="fas fa-folder-plus"></i> Thêm tình trạng</a>
               </div>
             </div>
-            <form class="row">
+            <form action="./profile" class="row" method="post" enctype="multipart/form-data">
               <div class="form-group col-md-3">
                 <label class="control-label">Mã sản phẩm </label>
                 <input class="form-control" type="number" placeholder="đang update" id="addMasp" readonly>
@@ -264,8 +264,8 @@
               <div class="form-group col-md-12">
                 <label class="control-label">Ảnh sản phẩm</label>
                 <div id="myfileupload">
-                  <input type="file" id="fileName1" name="ImageUpload" />
-                  <input type="file" id="fileName2" name="ImageUpload">
+                  <input type="file" id="fileName1" name="avatar" />
+                  <input type="file" id="fileName2" name="ImageUpload" name="avatar">
                 </div>
                 <!-- <div id="thumbbox">
                   <img height="450" width="400" alt="Thumb image" id="thumbimage" style="display: none" />
