@@ -55,11 +55,27 @@
 
                         <!--=====ĐĂNG NHẬP======-->
                         <div class="container-login100-form-btn">
-                            <a href="./index"><input type="button" value="Đăng nhập" id="submit" onclick="validate()" /></a>
+                            <input type="button" value="Đăng nhập" id="submit" onclick="validate()" />
                         </div>
+                        <script>
+                            function validate() {
+                                var username = document.getElementById("username").value;
+                                var password = document.getElementById("password-field").value;
+
+                                // Kiểm tra tên người dùng và mật khẩu
+                                if (username === "admin" && password === "123456") {
+                                    window.location.href = "./index";
+                                } else {
+                                    // Sai: Hiển thị thông báo lỗi
+                                    alert("Tên đăng nhập hoặc mật khẩu không đúng.");
+                                    return true;
+                                }
+                            }
+                        </script>
+
                         <!--=====LINK TÌM MẬT KHẨU======-->
                         <div class="text-right p-t-12">
-                            <a class="txt2" href="./forgot.html">
+                            <a class="txt2" href="./forgot">
                                 Bạn quên mật khẩu?
                             </a>
                         </div>

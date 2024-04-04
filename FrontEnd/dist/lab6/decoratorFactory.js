@@ -5,18 +5,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-function Logger1(constructor) {
-    console.log('Loading ...');
-    console.log(constructor);
+function Logger(Logstring) {
+    return function (constructor) {
+        console.log(Logstring);
+        console.log(constructor);
+    };
 }
-let Person = class Person {
+let Person1 = class Person1 {
     constructor() {
-        this.name = "Max";
-        console.log('Đang tạo file ');
+        this.name = 'Bôn kido';
+        console.log('Chào mừng bon kido đã trở lại');
     }
 };
-Person = __decorate([
-    Logger1
-], Person);
-const pers = new Person();
-console.log(pers);
+Person1 = __decorate([
+    Logger('Cập nhập thành công')
+], Person1);

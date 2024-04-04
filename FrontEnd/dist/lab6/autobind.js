@@ -5,18 +5,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-function Logger1(constructor) {
-    console.log('Loading ...');
-    console.log(constructor);
+function Autobind(_, _2, descriptor) {
+    const originalMethod = descriptor.value;
+    const adjDescriptor = {
+        configurable: true,
+        enumerable: false,
+        get() {
+            const boundFn = originalMethod.bind(this);
+            return boundFn;
+        },
+    };
+    return adjDescriptor;
 }
-let Person = class Person {
+class Printer {
     constructor() {
-        this.name = "Max";
-        console.log('Đang tạo file ');
+        this.message = 'This works!';
     }
-};
-Person = __decorate([
-    Logger1
-], Person);
-const pers = new Person();
-console.log(pers);
+    showMessage() {
+        console.log(this.message);
+    }
+}
+__decorate([
+    Autobind
+], Printer.prototype, "showMessage", null);
+const p = new Printer();
+p.showMessage();
+// 

@@ -33,8 +33,8 @@ http.onload = function() {
                             <h3>${item.name}</h3>
                         </div>
                         <div class="img">
-                            <img src="/FrontEnd/images/${item.image1}" alt="">
-                            <img src="/FrontEnd/images/${item.image2}" alt="" id="hover-image">
+                            <img src="/BackEnd/public/images/${item.image1}" alt="">
+                            <img src="/BackEnd/public/images/${item.image2}" alt="" id="hover-image">
                         </div>
                         <div class="add-btn">
                             <div class="add-to-cart">
@@ -74,8 +74,8 @@ http.onload = function() {
                             <h3>${item.name}</h3>
                         </div>
                         <div class="img">
-                            <img src="/FrontEnd/images/${item.image1}" alt="">
-                            <img src="/FrontEnd/images/${item.image2}" alt="" id="hover-image">
+                            <img src="/BackEnd/public/images/${item.image1}" alt="">
+                            <img src="/BackEnd/public/images/${item.image2}" alt="" id="hover-image">
                         </div>
                         <div class="add-btn">
                             <div class="add-to-cart">
@@ -114,8 +114,8 @@ http.onload = function() {
                             <h3>${item.name}</h3>
                         </div>
                         <div class="img">
-                            <img src="/FrontEnd/images/${item.image1}" alt="">
-                            <img src="/FrontEnd/images/${item.image2}" alt="" id="hover-image">
+                            <img src="/BackEnd/public/images/${item.image1}" alt="">
+                            <img src="/BackEnd/public/images/${item.image2}" alt="" id="hover-image">
                         </div>
                         <div class="add-btn">
                             <div class="add-to-cart">
@@ -153,8 +153,8 @@ http.onload = function() {
                             <h3>${item.name}</h3>
                         </div>
                         <div class="img">
-                            <img src="/FrontEnd/images/${item.image1}" alt="">
-                            <img src="/FrontEnd/images/${item.image2}" alt="" id="hover-image">
+                            <img src="/BackEnd/public/images/${item.image1}" alt="">
+                            <img src="/BackEnd/public/images/${item.image2}" alt="" id="hover-image">
                         </div>
                         <div class="add-btn">
                             <div class="add-to-cart">
@@ -192,8 +192,8 @@ http.onload = function() {
                             <h3>${item.name}</h3>
                         </div>
                         <div class="img">
-                            <img src="/FrontEnd/images/${item.image1}" alt="">
-                            <img src="/FrontEnd/images/${item.image2}" alt="" id="hover-image">
+                            <img src="/BackEnd/public/images/${item.image1}" alt="">
+                            <img src="/BackEnd/public/images/${item.image2}" alt="" id="hover-image">
                         </div>
                         <div class="add-btn">
                             <div class="add-to-cart">
