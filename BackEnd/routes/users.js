@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const User = require('../models/users');
+const User = require('../models/user');
 
 /* GET product by ID. */
 router.get('/id', function(req, res, next) {

@@ -1,6 +1,7 @@
 var tieptheo = document.getElementById("confirmPopup");
 
-tieptheo.addEventListener("click", e => {
+tieptheo.addEventListener("click", e =>{
+
     var nameCart = document.getElementById('nameCart').value;
     var phoneCart = document.getElementById('phoneCart').value;
     var emailCart = document.getElementById('emailCart').value;
@@ -15,37 +16,7 @@ tieptheo.addEventListener("click", e => {
     changePhone.innerHTML = phoneCart;
     changeEmail.innerHTML = emailCart;
     changeAdr.innerHTML = adressCart;
-
-    var nameProductCartElements = document.querySelectorAll('.nameProductCart').textContent;
-    var quantityCart = document.querySelectorAll('#quantity-cart').value;
-    var totalCart = document.querySelectorAll('.tongTien').textContent;
-    var activeCart = "Chờ duyệt";
-    var noteCart = document.querySelector('#noteCart').textContent;
-    var voucherCart = document.querySelector('#maGiamGia').textContent;
-
-    console.log(quantityCart);
-    
-    var productNames = "";
-    nameProductCartElements.forEach((element, index) => {
-        productNames += element;
-        if (index < nameProductCartElements.length - 1) {
-            productNames += ", "; // Thêm dấu phẩy nếu không phải là phần tử cuối cùng
-        }
-    });
-
-    var totalQuantity = 0;
-    quantityCart.forEach(element => {
-        var quantity = parseInt(element.textContent);
-        if (!isNaN(quantity)) {
-            totalQuantity += quantity;
-        }
-    });
-    
-    console.log('Tổng số lượng:', totalQuantity);
-
-    console.log(productNames);
-});
-
+})     
 
 //thời gian giảm dần 
 var thoigianbandau = 20;

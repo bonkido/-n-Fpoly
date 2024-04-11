@@ -90,17 +90,18 @@
                 <div class="cart-bottom">
                     <div class="icon thanhtoan" id="cartLink">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <span id="cartIcon" style="color: white; position: absolute; background-color: red;left : 103.4%;border-radius: 50%;top: 62%; width: auto;height: auto;min-width: 20px;font-size: 20px;display: flex;justify-content: center;align-items: center;"></span>
-                        <a href="#">Giỏ hàng</a>
+                        <span id="cartIcon" style="color: white; position: absolute; background-color: red;left : 103.4%;border-radius: 50%;top: 58%; width: auto;height: auto;min-width: 20px;font-size: 20px;display: flex;justify-content: center;align-items: center;"></span>
+                        <button style="border: none; background:none;color: white;font-family:monospace;letter-spacing: 1px;">Giỏ hàng</button>
                     </div>
                     <div class="icon yeuthich">
                         <i class="fa-solid fa-heart"></i>
                         <span id="cartIcon"></span>
-                        <a href="#">Yêu thích</a>
+                        <button style="border: none; background:none;color: white;font-family:monospace;letter-spacing: 1px;">Yêu thích</button>
                     </div>
                     <div class="icon taikhoan"  onclick=" openProfile()">
                         <i class="fa-solid fa-user"></i>
-                        <a href="#" id="cartProfile">Tài khoản</a>
+                        <span id="cartProfile"></span>
+                        <button style="border: none; background:none;color: white;font-family:monospace;letter-spacing: 1px;">Tài khoản</button>
                     </div>
                 </div>
                 <!-- cửa sổ popup chi tiết  -->
@@ -485,7 +486,7 @@
                                     </div>
                                     <div class="confirm-ghichu">
                                         <label for="">Ghi chú : </label>
-                                        <textarea name="" id="noteCart" cols="10" rows="3" placeholder="ghi chú cho admin"></textarea>
+                                        <textarea name="" id="" cols="10" rows="3" placeholder="ghi chú cho admin"></textarea>
                                     </div>
                                     <div class="confirm-thanhtoan">
                                         <input type="checkbox" name="" id="" style="width: 30px;">Bạn đã đọc kỹ thông tin trước khi thanh toán
@@ -859,10 +860,10 @@
             <div class="container-section5">
                 <div class="box1-stc5">
                     <div class="map-stc5">
-                        <iframe
+                        <!-- <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6538650994653!2d106.6214829748946!3d10.837778758059349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bb4522ff4c5%3A0xea98b8161eaeba47!2zMTYzLzE3LzUgxJDDtG5nIEjGsG5nIFRodeG6rW4gNiwgxJDDtG5nIEjGsG5nIFRodeG6rW4sIFF14bqtbiAxMiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1704783906224!5m2!1svi!2s"
                             width="100%" height="340px" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                     </div>
                 </div>
                 <div class="box2-stc5">
@@ -912,7 +913,9 @@
 
 <script src="/FrontEnd/javascripts/popup.js"></script>
 
-<script src="/FrontEnd/javascripts/product.js"></script>
+<!-- <script src="/FrontEnd/javascripts/product.js"></script> -->
+<!-- <script type="module" src="/FrontEnd/dist/view/cart.js"></script> -->
+<script type="module" src="/FrontEnd/dist/view/product.js"></script>
 
 <script>
   

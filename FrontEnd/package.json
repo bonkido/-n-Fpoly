@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "generate": "^0.14.0",
+    "sweetalert2": "^11.10.7",
     "typescript": "^5.4.3"
   }
 }

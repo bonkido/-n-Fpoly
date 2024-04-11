@@ -43,7 +43,7 @@ function addSp(productName, productImage1, productPrice) {
         </td>
         <td>
             <div class="popup-name">
-                <span class="nameProductCart">${productName}</span>
+                <span>${productName}</span>
             </div>
         </td>
         <td>

@@ -14,9 +14,10 @@ db.connect();
 
 // trỏ đến file muốn in
 var productsRouter = require('./routes/products');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var billsRouter = require('./routes/bills');
+var searchRouter = require('./routes/search');
+var indexRouter = require('./routes/fullSp');
+var userRouter = require('./routes/users');
+var billRouter = require('./routes/bills');
 
 var app = express();
 app.use(methodOverride('_method'))
@@ -34,10 +35,11 @@ app.use(express.static(path.join(__dirname, 'public'))); // kiểm tra xem join 
 app.use(morgan('combined'));
 
 // basic routing (đường dẫn trên https) ------ app.use(path,(handlebars));
+app.use('/search', searchRouter);
 app.use('/product', productsRouter);
-app.use('/', indexRouter);
-app.use('/user', usersRouter);
-app.use('/bill', billsRouter);
+app.use('/index', indexRouter);
+app.use('/user', userRouter);
+app.use('/bill', billRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
