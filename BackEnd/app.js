@@ -18,6 +18,7 @@ var searchRouter = require('./routes/search');
 var indexRouter = require('./routes/fullSp');
 var userRouter = require('./routes/users');
 var billRouter = require('./routes/bills');
+var vacxinRouter = require('./routes/lists');
 
 var app = express();
 app.use(methodOverride('_method'))
@@ -40,6 +41,7 @@ app.use('/product', productsRouter);
 app.use('/index', indexRouter);
 app.use('/user', userRouter);
 app.use('/bill', billRouter);
+app.use('/list', vacxinRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

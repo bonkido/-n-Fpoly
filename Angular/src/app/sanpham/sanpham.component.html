@@ -1,0 +1,26 @@
+<ul>
+  <li><a href="danhsachsanpham/1"><button>Đồ ăn</button></a></li>
+  <li><a href="danhsachsanpham/2"><button>Nước uống</button></a></li>
+  <li><a href="danhsachsanpham/3"><button>Ăn vặt</button></a></li>
+  <li><a href="danhsachsanpham/4"><button>Đồ dùng</button></a></li>
+</ul>
+<div class="card-container">
+    <div class="card" *ngFor="let item of foodItems">
+        <div class="card-img">
+            <img src="{{item.img}}" alt="">
+        </div>
+        <div class="card-info">
+          <p class="text-title">{{item.name}}</p>
+        </div>
+        <p class="text-body">{{item.slogan}}</p>
+        <div class="card-footer">
+        <span class="text-title">${{item.price}}</span>
+        <div class="card-button">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <!-- <button type="button" (click)="so_ngau_nhien()">
+          Số ngẫu nhiên
+        </button> -->
+      </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.h-1000{
+    background-image: url(https://images.pexels.com/photos/3702403/pexels-photo-3702403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 260px;
+    padding: 10px;
+    
+}
+
+.h-200{
+    background-image: url(https://images.pexels.com/photos/4051497/pexels-photo-4051497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 260px;
+    color: white;
+    padding: 10px;
+    
+}
+
+.h-300{
+    background-image: url(https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 260px;
+    color: white;
+    padding: 10px;
+    
+}
