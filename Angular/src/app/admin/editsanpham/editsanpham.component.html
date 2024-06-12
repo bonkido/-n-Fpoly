@@ -1,0 +1,52 @@
+<form action="">
+    
+	
+
+		<div class="modal__header">
+			<span class="modal__title">Sửa sản phẩm</span><button class="button button--icon"><svg width="24" viewBox="0 0 24 24" height="24" xmlns="http://www.w3.org/2000/svg">
+					<path fill="none" d="M0 0h24v24H0V0z"></path>
+					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg></button>
+		</div>
+		<div class="modal__body" *ngIf="selectedProduct">
+			<div class="input">
+				<label class="input__label">Tên sản phẩm</label>
+				<input class="input__field" type="text" id="name" [value]="selectedProduct.name" (input)="onNameChange($event)">
+				<p class="input__description">Tên sản phẩm cho mọi người dể hiểu nhaaaa</p>
+			</div>
+            <div class="input">
+				<label class="input__label">Giá sản phẩm</label>
+				<input class="input__field" type="number" id="price" value="{{ selectedProduct.price }}"  (input)="onPriceChange($event)"> 
+				<p class="input__description">Giá sản phẩm vừa phải mới nhiều người mua</p>
+			</div>
+            <div class="input">
+				<label class="input__label">Số lượng sản phẩm</label>
+				<input class="input__field" type="number" value="{{ selectedProduct.quantity }}"  (input)="onQuantityChange($event)"> 
+				<p class="input__description">điền thông tin đầy đủ nhé</p>
+			</div>
+            <div class="input">
+				<label class="input__label">Danh mục</label>
+				<select name="" id=""  (input)="onCategoryChange($event)">
+					<option value="">{{ selectedProduct.category }}</option>
+                    <option value="Food">Đồ ăn</option>
+                    <option value="Drink">Nước uống</option>
+                    <option value="Vegetable">Ăn chay</option>
+                </select>
+				<p class="input__description">Danh mục chọn đúng không tìm sai nhó</p>
+			</div>
+            <div class="input">
+				<label class="input__label">Hình ảnh</label>
+				<input class="input__field" type="file"  value="{{ selectedProduct.image }}"> 
+				<p class="input__description">Điền thông tin thông tin</p>
+			</div>
+			<div class="input">
+								<label class="input__label">Slogan</label>
+				<textarea  (input)="onSloganChange($event)" class="input__field input__field--textarea">{{ selectedProduct.slogan }}</textarea>
+					<p class="input__description">slogan khiến đồ ăn của bạn ngầu hơn </p>
+			</div>
+		</div>
+		<div class="modal__footer">
+			<button class="button button--primary" (click)="saveProduct()">Sửa ngay</button>
+		</div>
+
+
+</form>

@@ -1,0 +1,30 @@
+
+<ul>
+  <li><a href="danhsachsanpham/1"><button>Đồ ăn</button></a></li>
+  <li><a href="danhsachsanpham/2"><button>Nước uống</button></a></li>
+  <li><a href="danhsachsanpham/3"><button>Ăn vặt</button></a></li>
+  <li><a href="danhsachsanpham/4"><button>Đồ dùng</button></a></li>
+</ul>
+<form action="">
+  <div class="card-container">
+  
+    <div class="card" *ngFor="let loai of listProducts; let i= index ">
+      <div class="card-img">
+          <img src="{{loai.image}}" alt="">
+      </div>
+      <div class="card-info">
+        <p class="text-title">{{loai.name}}</p>
+      </div>
+      <p class="text-body">{{loai.slogan}}</p>
+      <div class="card-footer">
+        <span class="text-title">${{loai.price}}</span>
+        <div class="card-button"  (click)="addToCart(loai)">
+           <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div>
+      </div>
+
+  </div>
+</form>
+
+

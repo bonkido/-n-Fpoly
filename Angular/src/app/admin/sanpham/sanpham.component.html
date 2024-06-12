@@ -1,0 +1,90 @@
+
+
+        <div class="row">
+
+          <div class="col-md-12">
+            <div class="app-title">
+              <ul class="app-breadcrumb breadcrumb">
+                <li class="breadcrumb-item"><a href="#"><b>Danh sách sản phẩm</b></a></li>
+              </ul>
+            </div>
+          </div>
+
+            <div class="col-md-12">
+                <div class="tile">
+                    <div class="tile-body">
+                        <div class="row element-button">
+                            <div class="col-sm-2">
+              
+                              <a class="btn btn-add btn-sm" href="admin/themsp" title="Thêm"><i class="fas fa-plus"></i>
+                                Tạo mới sản phẩm</a>
+                            </div>
+                            <div class="col-sm-2">
+                              <a class="btn btn-delete btn-sm nhap-tu-file" type="button" title="Nhập" onclick="myFunction(this)"><i
+                                  class="fas fa-file-upload"></i> Tải từ file</a>
+                            </div>
+              
+                            <div class="col-sm-2">
+                              <a class="btn btn-delete btn-sm print-file" type="button" title="In" onclick="myApp.printTable()"><i
+                                  class="fas fa-print"></i> In dữ liệu</a>
+                            </div>
+                            <div class="col-sm-2">
+                              <a class="btn btn-delete btn-sm print-file js-textareacopybtn" type="button" title="Sao chép"><i
+                                  class="fas fa-copy"></i> Sao chép</a>
+                            </div>
+              
+                            <div class="col-sm-2">
+                              <a class="btn btn-excel btn-sm" href="" title="In"><i class="fas fa-file-excel"></i> Xuất Excel</a>
+                            </div>
+                            <div class="col-sm-2">
+                              <a class="btn btn-delete btn-sm pdf-file" type="button" title="In" onclick="myFunction(this)"><i
+                                  class="fas fa-file-pdf"></i> Xuất PDF</a>
+                            </div>
+                            <!-- <div class="col-sm-2">
+                              <a class="btn btn-delete btn-sm" type="button" title="Xóa" onclick="myFunction(this)"><i
+                                  class="fas fa-trash-alt"></i> Xóa tất cả </a>
+                            </div> -->
+                          </div>
+                        <table class="table table-hover table-bordered" id="sampleTable">
+                            <thead>
+                                <tr>
+                                   
+                                    <th>Mã sản phẩm</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Ảnh</th>
+                                    <th>Số lượng</th>
+                                    <th>Slogan</th>
+                                    <th>Giá tiền</th>
+                                    <th>Danh mục</th>
+                                    <th>Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let sanpham of listProducts ; let i = index">
+                                <td>{{sanpham.id}}</td>
+                                <td>{{sanpham.name}}</td>
+                                <td><img src="{{sanpham.image}}" alt="" width="100px" height="100px"></td>
+                                <td>{{sanpham.quantity}}</td>
+                                <td>{{sanpham.slogan}}</td>
+                                <td>{{sanpham.price}}</td>
+                                <td>{{sanpham.category}}</td>
+                                <td>
+                                 <button class="xoa" (click)="removeFromCart(sanpham.id)"> Xóa </button>
+                                 <button class="sua" (click)="editProduct(sanpham)">Sửa</button>
+                           
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--
+  MODAL
+-->
+
+
+
+
+
+

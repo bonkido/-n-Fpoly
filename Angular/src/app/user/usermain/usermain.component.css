@@ -1,0 +1,17 @@
+.themsp button {
+    background-color: rgb(168, 0, 0);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  .dropdown-menu .dropdown-item{
+    color: black;
+  }

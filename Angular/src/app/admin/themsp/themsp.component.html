@@ -1,0 +1,55 @@
+<form action=""  [formGroup]="frm1" (ngSubmit)="submit()">
+	
+	
+
+	<div class="modal__header">
+		<span class="modal__title">Thêm sản phẩm</span><button class="button button--icon"><svg width="24" viewBox="0 0 24 24" height="24" xmlns="http://www.w3.org/2000/svg">
+				<path fill="none" d="M0 0h24v24H0V0z"></path>
+				<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg></button>
+	</div>
+	<div class="modal__body">
+		<div class="input">
+			<label class="input__label">Tên sản phẩm</label>
+			<input formControlName="name" class="input__field" type="text" list="name"> 
+			<datalist value="name" id="name">
+				<option value="Canh Chua">Canh Chua</option>
+				<option value="Demo 2024">Demo 2024</option>
+			</datalist>
+			<p class="input__description">Tên sản phẩm cho mọi người dể hiểu nhaaaa</p>
+		</div>
+		<div class="input">
+			<label class="input__label">Giá sản phẩm</label>
+			<input   formControlName="price" class="input__field" type="number"> 
+			<p class="input__description">Giá sản phẩm vừa phải mới nhiều người mua</p>
+		</div>
+		<div class="input">
+			<label class="input__label">Số lượng sản phẩm</label>
+			<input formControlName="quantity" class="input__field" type="number"> 
+			<p class="input__description">điền thông tin đầy đủ nhé</p>
+		</div>
+		<div class="input">
+			<label class="input__label">Danh mục</label>
+			<select  formControlName="category" name="" id="">
+				<option value="Food">Đồ ăn</option>
+				<option value="Drink">Nước uống</option>
+				<option value="Vegetable">Ăn chay</option>
+			</select>
+			<p class="input__description">Danh mục chọn đúng không tìm sai nhó</p>
+		</div>
+		<div class="input">
+			<label class="input__label">Hình ảnh</label>
+			<input formControlName="image" class="input__field" type="file"> 
+			<p class="input__description">Điền thông tin thông tin</p>
+		</div>
+		<div class="input">
+							<label class="input__label">Slogan</label>
+			<textarea formControlName="slogan" class="input__field input__field--textarea"></textarea>
+				<p class="input__description">slogan khiến đồ ăn của bạn ngầu hơn </p>
+		</div>
+	</div>
+	<div class="modal__footer">
+		<button type="submit" class="button button--primary">Thêm ngay</button>
+	</div>
+
+
+</form>

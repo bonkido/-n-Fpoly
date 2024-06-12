@@ -1,0 +1,189 @@
+{
+  "Products": [
+    {
+      "id": "1",
+      "name": "Phở Bò",
+      "price": 9,
+      "slogan": "Hương vị truyền thống Việt Nam",
+      "quantity": 9,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/6646351/pexels-photo-6646351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "2",
+      "name": "Bún chả đông",
+      "price": 4,
+      "slogan": "Đậm đà hương vị Hà Nội",
+      "quantity": 15,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/3858270/pexels-photo-3858270.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "3",
+      "name": "Bánh Mì Que",
+      "price": 15,
+      "slogan": "Vị ngon khó quên",
+      "quantity": 30,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/1483769/pexels-photo-1483769.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "4",
+      "name": "Cơm Sườn",
+      "price": 10,
+      "slogan": "Món ăn gia đình",
+      "quantity": 18,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/18176521/pexels-photo-18176521/free-photo-of-meat-and-rice.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "5",
+      "name": "Bánh Xèo",
+      "price": 20,
+      "slogan": "Giòn tan, thơm ngon",
+      "quantity": 22,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/6009475/pexels-photo-6009475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "6",
+      "name": "Cá Kho Tộ",
+      "price": 5,
+      "slogan": "Hương vị miền Tây",
+      "quantity": 12,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "7",
+      "name": "Bánh Flan",
+      "price": 2,
+      "slogan": "Thơm ngọt, tan trong miệng",
+      "quantity": 25,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/302468/pexels-photo-302468.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "8",
+      "name": "Chả Cá Lã Vọng",
+      "price": 33,
+      "slogan": "Đặc sản Hà Nội",
+      "quantity": 8,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/14457194/pexels-photo-14457194.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+    },
+    {
+      "id": "9",
+      "name": "Gỏi Cuốn",
+      "price": 3,
+      "slogan": "Tươi ngon, thanh mát",
+      "quantity": 28,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/13023449/pexels-photo-13023449.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+    },
+    {
+      "id": "10",
+      "name": "Bún Đậu Mắm Tôm",
+      "price": 6,
+      "slogan": "Hương vị miền Bắc",
+      "quantity": 16,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/5116817/pexels-photo-5116817.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": "11",
+      "name": "Trà Xanh",
+      "price": 15,
+      "slogan": "Thanh mát và tốt cho sức khỏe",
+      "quantity": 30,
+      "category": "Drink",
+      "image": "https://images.pexels.com/photos/5946966/pexels-photo-5946966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "12",
+      "name": "Nước Dừa",
+      "price": 20,
+      "slogan": "Giải nhiệt và bổ dưỡng",
+      "quantity": 25,
+      "category": "Drink",
+      "image": "https://images.pexels.com/photos/4395019/pexels-photo-4395019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "13",
+      "name": "Coca-Cola",
+      "price": 10,
+      "slogan": "Thức uống giải khát số 1",
+      "quantity": 40,
+      "category": "Drink",
+      "image": "https://images.pexels.com/photos/17236593/pexels-photo-17236593/free-photo-of-a-can-of-coca-cola.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "14",
+      "name": "Bia Hà Nội",
+      "price": 25,
+      "slogan": "Hương vị truyền thống",
+      "quantity": 20,
+      "category": "Drink",
+      "image": "https://images.pexels.com/photos/1267292/pexels-photo-1267292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "15",
+      "name": "Sữa Tươi",
+      "price": 18,
+      "slogan": "Bổ dưỡng và dinh dưỡng",
+      "quantity": 35,
+      "category": "Drink",
+      "image": "https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "16",
+      "name": "Ép dưa hấu",
+      "price": 12,
+      "slogan": "Bổ dưỡng và dinh dưỡng",
+      "quantity": 35,
+      "category": "Drink",
+      "image": "https://images.pexels.com/photos/4753650/pexels-photo-4753650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ],
+  "category": [
+    {
+      "name": "Đồ ăn",
+      "id": "d1af"
+    },
+    {
+      "name": "Nước uống",
+      "id": "9c48"
+    },
+    {
+      "name": "Ăn vặt",
+      "id": "6c3f"
+    },
+    {
+      "name": "Ăn chay",
+      "id": "520d"
+    }
+  ],
+  "Cart": [
+    {
+      "id": "6",
+      "name": "Cá Kho Tộ",
+      "price": 5,
+      "slogan": "Hương vị miền Tây",
+      "quantity": 2,
+      "category": "Food",
+      "image": "https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ],
+  "login": [
+    {
+      "id": "9bb5",
+      "un": "bonkido",
+      "pw": "123"
+    },
+    {
+      "id": "825d",
+      "un": "admin",
+      "pw": "123"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<h2 class="text-center">Giỏ hàng của bạn</h2>
+<div class="container"> 
+ <table id="cart" class="table table-hover table-condensed"> 
+  <thead> 
+   <tr> 
+    <th style="width:50%">Tên sản phẩm</th> 
+    <th style="width:10%">Giá</th> 
+    <th style="width:8%">Số lượng</th> 
+    <th style="width:22%" class="text-center">Thành tiền</th> 
+    <th style="width:10%"> </th> 
+   </tr> 
+  </thead> 
+  <tbody  *ngFor="let sanpham of listProducts;let i = index">
+    <tr> 
+  </tr> 
+  <tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img src="{{sanpham.image}}" alt="Sản phẩm 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <h4 class="nomargin">{{sanpham.name}}</h4> 
+      <p>{{sanpham.slogan}}</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">{{sanpham.price}} $</td> 
+   <td data-th="Quantity"><input class="form-control text-center"  [(ngModel)]="sanpham.quantity" (change)="onQuantityChange(sanpham)" value="{{sanpham.quantity}}" type="number" max="20"  min="1">
+   </td> 
+   <!-- <button (click)="tang()"></button> -->
+   <!-- {{so_san_pham}} -->
+   <td data-th="Subtotal" class="text-center">  {{sanpham.thanhTien}} $</td> 
+   <td class="actions" data-th="">
+    <!-- <button class="btn btn-info btn-sm"  (click)="startEditProduct(sanpham)"><i class="fa fa-edit"></i>
+    </button>  -->
+    <button class="btn btn-danger btn-sm"  (click)="removeFromCart(sanpham.id)"><i class="fa-solid fa-trash"></i>
+    </button>
+   </td> 
+  </tr> 
+  </tbody>
+  <tfoot > 
+   <tr class="visible-xs"> 
+   </tr> 
+   <tr> 
+    <td><a href="sanpham" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+    </td> 
+    <td colspan="2" class="hidden-xs"> </td> 
+    <td class="hidden-xs text-center"><strong>Tổng tiền : {{ tongThanhTien | currency:'$' }}</strong>
+    </td> 
+    <td><a href="" class="btn btn-success btn-block">Thanh toán</a>
+    </td> 
+   </tr> 
+  </tfoot> 
+ </table>
+</div>
+
+
+<div class="container-form">
+  <div class="edit-form" *ngIf="editingProduct">
+    <h3>Sửa sản phẩm</h3>
+    <div class="form-group">
+      <label for="name">Tên:</label> <br>
+      <input type="text" id="name" [(ngModel)]="editingProduct.name">
+    </div>
+    <div class="form-group">
+      <label for="description">Mô tả:</label> <br>
+      <textarea id="description" [(ngModel)]="editingProduct.slogan"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="price">Giá:</label> <br>
+      <input type="number" id="price" id="price" readonly [(ngModel)]="editingProduct.price">
+    </div>
+    <div class="form-group">
+      <label for="quantity">Số lượng:</label> <br>
+      <input type="number" id="quantity" [(ngModel)]="editingProduct.quantity" min="1">
+    </div>
+    <div class="form-actions">
+      <button class="save-btn" (click)="saveEditProduct()">Lưu</button>
+      <button class="cancel-btn" (click)="editingProduct = null">Hủy</button>
+    </div>
+  </div>
+</div>

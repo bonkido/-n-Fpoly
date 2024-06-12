@@ -1,0 +1,155 @@
+
+<div class="text-white text-center">
+    <img src="assets/images/biadep.png" alt="" style="width: 100%; height: 200px; object-fit: cover;">
+  </div>
+  
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo.png" alt="" style="width: 70px; height: auto; object-fit: cover; filter: brightness(0) invert(1);">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/home">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/sanpham">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/gioithieu">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/giohang">Giỏ hàng</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Danh mục
+              </a>
+  
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" *ngFor="let loai of listLoai; let i= index" href="#"> {{loai.name}} </a></li>
+                <!-- <li><a class="dropdown-item" href="#">Số điện thoại</a></li> -->
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Nhắn tin trực tiếp </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/dangnhap">Đăng nhập</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/dangki" aria-disabled="false">Đăng kí</a>
+              </li>
+            <li class="nav-item" *ngIf="daDangNhap()">
+                <a class="nav-link" routerLink="doipass" href="#"> Đổi pass</a>
+            </li>
+          </ul>
+          <div class="themsp">
+            <button>Tình trạng đăng nhập: {{ daDangNhap() }}</button>
+            <button (click)="thoat()" >Thoát</button>
+          </div>
+          <form class="d-flex" role="search">
+            <input class="form-control me-3" type="search" placeholder="tìm kiếm sản phẩm yêu thích" aria-label="Search" style="width: 250px;">
+            <button class="btn btn-outline-success" type="submit">Tìm</button>
+          </form>
+        </div>
+      </div>
+  </nav>
+  
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+  
+    <!-- Section: Links  -->
+    <section class="p-1">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Thế Giới Ẩm Thực
+            </h6>
+            <p>
+             chào bạn ! rất vui được làm quen , tôi là chuyên gia chuyên cung cấp 1 số nguồn thực phẩm đảm bảo chất lượng 100%
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Danh mục
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Đồ ăn</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Nước uống</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Ăn vặt</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Đồ dùng</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Hỗ trợ
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Thông tin</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Chính sách</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Cài đặt</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Giúp đỡ</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Liên Hệ</h6>
+            <p><i class="fas fa-home me-3"></i> Ho Chi Minh City 2024</p>
+            <p><i class="fas fa-phone me-3"></i> + 84 3333 769 521</p>
+            <p><i class="fas fa-print me-3"></i> + 84 9827 728 762</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <a class="text-reset fw-bold" href="#">nguyenthienphu.right</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  
